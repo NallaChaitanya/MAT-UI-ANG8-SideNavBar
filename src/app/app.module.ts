@@ -3,16 +3,35 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule} from '@angular/material';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
+  exports:[
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
